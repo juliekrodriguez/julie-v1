@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px; /* Add spacing between container elements */
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Slightly larger gap for better spacing */
+  }
+
+  img {
+    width: 20px;
+    height: auto; /* Ensure proper aspect ratio */
+  }
+}
+
+.skillList {
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  flex-wrap: wrap;
+  row-gap: 40px; /* Maintain even spacing between rows */
+  max-width: 26ch;
+  padding: 0 10px; /* Add padding for better alignment */
+}
+
+hr {
+  width: 100px;
+  height: 1px;
+  border: none;
+  background-color: var(--text-color);
+  margin: 30px auto;
+}
+
+@media (min-width: 800px) { /* Correct media query syntax */
+  .skillList {
+    max-width: fit-content;
+    gap: 30px; /* Increased gap for larger screens */
+  }
+
+  .skillList p {
+    font-size: 20px; /* Apply font size to text specifically */
+  }
+
+  hr {
+    width: 300px; /* Wider line for larger screens */
+  }
+}
