@@ -6,10 +6,11 @@ const ThemeContext = createContext();
 export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({children}) => {
-
-    const [theme, setTheme] = useState(
-        () => localStorage.getItem('theme') || 'light'
-    );
+     // Set the initial theme to dark if nothing is saved in localStorage
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('theme');
+    return savedTheme ? savedTheme : 'dark'; // Default to dark mode
+  });
 
     useEffect(()=>{
         document.body.setAttribute('data-theme', theme);
