@@ -5,8 +5,8 @@ function Contact() {
   return (
     <section id="contact" className={styles.container}>
       <h1 className="sectionTitle">Contact</h1>
-       {/* Phone/Text Icon */}
-       <a href="sms:+1234567890" className={styles.phoneIcon}>
+       {/* Phone/Text Icon + updating number */}
+       <a href="sms:+12068871087" className={styles.phoneIcon}>
         <MessageCircle size={32} color="teal" />
       </a>
       <form action="https://api.web3forms.com/submit"
